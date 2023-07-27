@@ -23,9 +23,9 @@ export default function App() {
           height: Math.floor(expense.amount * 2.88),
         }))
         setExpenses(list)
-        // setTimeout(() => {
-        setIsLoading(false)
-        // }, 2000)
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 1500)
         setError(null)
       })
       .catch(() => {
