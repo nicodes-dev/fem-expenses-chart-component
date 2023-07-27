@@ -104,7 +104,7 @@ export default function App() {
                 >
                   <span
                     data-value={`$${expense.amount}`}
-                    className={`bar relative w-full rounded-[3px] animate-grow ${
+                    className={`bar relative w-full rounded-[3px] animate-grow transition-colors ${
                       date.getUTCDay() === index
                         ? 'bg-accent-cyan hover:bg-[#76b5bcaa]'
                         : 'bg-primary-500 hover:bg-[#ec755daa]'
