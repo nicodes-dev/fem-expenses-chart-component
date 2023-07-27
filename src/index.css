@@ -1,3 +1,47 @@
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind base;
+
+@layer {
+  body {
+    @apply bg-neutral-300;
+  }
+  #root {
+    @apply grid 
+    content-center 
+    items-center
+    min-h-screen md:max-w-[1110px] mx-auto grid-cols-12 sm:gap-x-[20px] md:gap-x-[30px] sm:max-w-[564px]
+    gap-y-4 md:gap-y-6 relative;
+  }
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.main-container {
+  animation: 5s ease-in forward fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bar:hover::before {
+  content: attr(data-value);
+  position: absolute;
+  top: -50px;
+  left: -10px;
+  font-size: 18px;
+  line-height: 23px;
+  background: theme('colors.primary-800');
+  color: theme('colors.neutral-100');
+  padding: 8px;
+  border-radius: 5px;
+  z-index: 50;
+}
