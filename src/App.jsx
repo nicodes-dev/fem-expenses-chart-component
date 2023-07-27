@@ -23,9 +23,9 @@ export default function App() {
           height: Math.floor(expense.amount * 2.88),
         }))
         setExpenses(list)
-        setTimeout(() => {
-          setIsLoading(false)
-        }, 2000)
+        // setTimeout(() => {
+        //   setIsLoading(false)
+        // }, 2000)
         setError(null)
       })
       .catch(() => {
@@ -47,9 +47,9 @@ export default function App() {
             <circle stroke="#FFF" strokeWidth="2" cx="24" cy="24" r="23" />
           </g>
         </svg>
-        <p className="animate-pulse text-lg md:text-2xl mt-4 md:mt-8 font-semibold">
+        <h1 className="animate-pulse text-lg md:text-2xl mt-4 md:mt-8 font-semibold">
           Loading... Please Wait
-        </p>
+        </h1>
       </div>
     )
   }
@@ -57,9 +57,9 @@ export default function App() {
   if (error) {
     return (
       <div className="col-span-full place-self-center text-center">
-        <p className="text-lg md:text-2xl mt-4 md:mt-8 text-primary-800 font-bold">
+        <h1 className="text-lg md:text-2xl mt-4 md:mt-8 text-primary-800 font-bold">
           {error}
-        </p>
+        </h1>
       </div>
     )
   }
@@ -67,7 +67,7 @@ export default function App() {
   const content = expenses && (
     <>
       <main className="relative px-4 flex flex-col gap-y-4 md:gap-y-6 col-span-12 md:col-start-4 md:col-end-10 sm:px-12  md:px-0">
-        <div
+        <header
           className="bg-primary-500 p-5 md:px-8 md:pt-[27px]  md:pb-[23px] 
         flex items-center justify-between
         text-white rounded-[10px] md:rounded-[20px]"
@@ -90,7 +90,7 @@ export default function App() {
               <circle stroke="#FFF" strokeWidth="2" cx="24" cy="24" r="23" />
             </g>
           </svg>
-        </div>
+        </header>
         <div className="bg-neutral-100 px-5 py-6 md:px-10 md:py-8 rounded-[10px] md:rounded-[20px]">
           <div className="border-b-2 border-neutral-300 ">
             <h3 className="text-2xl md:text-[32px] md:leading-[42px]  font-bold leading-[31px] text-primary-800">
