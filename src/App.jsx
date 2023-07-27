@@ -24,7 +24,7 @@ export default function App() {
         }))
         setExpenses(list)
         // setTimeout(() => {
-        //   setIsLoading(false)
+        setIsLoading(false)
         // }, 2000)
         setError(null)
       })
