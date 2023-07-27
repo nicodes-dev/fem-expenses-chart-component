@@ -36,7 +36,7 @@ export default function App() {
 
   if (isLoading) {
     return (
-      <div className="col-span-full place-self-center ">
+      <main className="col-span-full place-self-center">
         <svg
           className="w-[60px] h-[40px] md:w-[72px] md:h-[48px] animate-spin mx-auto"
           viewBox="0 0 72 48"
@@ -50,7 +50,7 @@ export default function App() {
         <h1 className="animate-pulse text-lg md:text-2xl mt-4 md:mt-8 font-semibold">
           Loading... Please Wait
         </h1>
-      </div>
+      </main>
     )
   }
 
